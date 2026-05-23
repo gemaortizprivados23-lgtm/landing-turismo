@@ -18,37 +18,16 @@ body{
 /* ========================= */
 
 body.dark-mode{
-    background:#081018;
+    background:#000307;
     color:white;
 }
 
 body.dark-mode .card,
 body.dark-mode .testimonial-card,
 body.dark-mode .faq-item,
-body.dark-mode .stat-box,
-body.dark-mode form{
-    background:#102030;
+body.dark-mode .stat-box{
+    background:#435220;
     color:white;
-}
-
-body.dark-mode .about,
-body.dark-mode .contact,
-body.dark-mode .faq{
-    background:#081018;
-}
-
-body.dark-mode .section-title h2,
-body.dark-mode .about-text h2,
-body.dark-mode .testimonial-header h4,
-body.dark-mode .card-content h3{
-    color:white;
-}
-
-body.dark-mode .about-text p,
-body.dark-mode .testimonial-card p,
-body.dark-mode .faq-answer,
-body.dark-mode .card-content p{
-    color:#dcdcdc;
 }
 
 /* ========================= */
@@ -67,119 +46,55 @@ body.dark-mode .card-content p{
 .subtitle{
     color:#00B4D8;
     font-weight:bold;
-    letter-spacing:3px;
-    font-size:15px;
+    letter-spacing:2px;
 }
 
 .section-title h2{
-    font-size:55px;
-    margin-top:15px;
+    font-size:50px;
+    margin-top:10px;
     color:#0B2545;
 }
 
-.section-description{
-    max-width:700px;
-    margin:auto;
-    margin-top:20px;
-    line-height:1.8;
-    color:#666;
-}
-
 /* ========================= */
-/* HEADER FIJO */
+/* HEADER */
 /* ========================= */
 
 .header{
-
     position:fixed;
-
-    top:0;
-
-    left:0;
-
     width:100%;
-
-    z-index:9999;
-
-    background:rgba(11,37,69,0.85);
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.2);
-
+    top:0;
+    z-index:1000;
+    transition:0.4s;
 }
 
-/* NAVBAR */
+.header.active{
+    background:#0B2545;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
 
 .navbar{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    padding:18px 8%;
-
+    padding:20px 8%;
 }
 
-/* ========================= */
-/* LOGO */
-/* ========================= */
-
-.logo-container{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-.logo-img{
-    width:65px;
-    height:65px;
-    object-fit:cover;
-    border-radius:50%;
-    background:white;
-    padding:4px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.25);
-}
-
-.logo-text{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.logo-text h2{
+.logo{
     color:white;
-    font-size:28px;
-    margin:0;
-    line-height:1;
+    font-size:32px;
+    font-weight:bold;
 }
-
-.logo-text span{
-    color:white;
-    font-size:12px;
-    letter-spacing:2px;
-    margin-top:4px;
-}
-
-/* ========================= */
-/* NAV LINKS */
-/* ========================= */
 
 .nav-links{
     display:flex;
-    align-items:center;
     list-style:none;
-    gap:35px;
+    gap:30px;
 }
 
 .nav-links a{
     text-decoration:none;
     color:white;
-    font-weight:600;
-    font-size:17px;
+    font-weight:bold;
     transition:0.3s;
 }
 
@@ -193,9 +108,53 @@ body.dark-mode .card-content p{
     font-size:30px;
     cursor:pointer;
 }
+/* =========================
+   LOGO
+========================= */
+
+.logo-container{
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.logo-img{
+
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+.logo-text{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo{
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+
+}
+
+.logo-text span{
+
+    font-size: 0.8rem;
+    color: #ddd;
+
+}
 
 /* ========================= */
-/* DARK BUTTON */
+/* THEME BUTTON */
 /* ========================= */
 
 .theme-btn{
@@ -210,7 +169,7 @@ body.dark-mode .card-content p{
     color:white;
     font-size:20px;
     cursor:pointer;
-    z-index:9999;
+    z-index:2000;
     box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
@@ -219,57 +178,45 @@ body.dark-mode .card-content p{
 /* ========================= */
 
 .hero{
-
     position:relative;
-
-    min-height:100vh;
-
+    height:100vh;
     background:url('/src/assets/images/hero.jpg');
-
     background-size:cover;
-
     background-position:center;
-
-    background-repeat:no-repeat;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
 }
 
 .overlay{
     position:absolute;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.60);
+    background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
     position:relative;
     z-index:10;
     color:white;
-    max-width:900px;
+    max-width:850px;
     padding:20px;
 }
 
 .hero-content h2{
-    font-size:80px;
+    font-size:75px;
     margin-bottom:25px;
 }
 
 .hero-content p{
-    font-size:24px;
+    font-size:22px;
     line-height:1.8;
     margin-bottom:35px;
 }
 
 .hero-content button{
-    padding:18px 45px;
+    padding:18px 40px;
     border:none;
     border-radius:50px;
     background:#00B4D8;
@@ -309,7 +256,7 @@ body.dark-mode .card-content p{
 .about-text p{
     line-height:1.9;
     margin-bottom:25px;
-    color:#555;
+    color:#080000;
 }
 
 .line{
@@ -412,7 +359,7 @@ body.dark-mode .card-content p{
 }
 
 /* ========================= */
-/* TESTIMONIOS */
+/* TESTIMONIALS */
 /* ========================= */
 
 .testimonial-container{
@@ -449,12 +396,12 @@ body.dark-mode .card-content p{
 }
 
 .testimonial-header h4{
-    color:#0B2545;
+    color:#000205;
     margin-bottom:5px;
 }
 
 .testimonial-header span{
-    color:#777;
+    color:#0e0c0c;
     font-size:14px;
 }
 
@@ -467,11 +414,11 @@ body.dark-mode .card-content p{
 
 .testimonial-card p{
     line-height:1.8;
-    color:#555;
+    color:#050000;
 }
 
 /* ========================= */
-/* FAQ */
+/* FAQ MODERNO */
 /* ========================= */
 
 .faq{
@@ -490,26 +437,38 @@ body.dark-mode .card-content p{
     background:white;
     border-radius:20px;
     overflow:hidden;
+
     border:1px solid rgba(0,0,0,0.08);
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
+
     transition:0.4s;
 }
 
 .faq-item:hover{
     transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.1);
 }
 
 .faq-question{
     width:100%;
     border:none;
     background:white;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:28px 30px;
+
     cursor:pointer;
+
     font-size:18px;
     font-weight:bold;
+
     color:#0B2545;
 }
 
@@ -522,22 +481,38 @@ body.dark-mode .card-content p{
 .faq-icon{
     width:55px;
     height:55px;
+
     border-radius:18px;
+
     background:#E8F9FD;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     color:#00B4D8;
+
     font-size:22px;
+}
+
+.faq-question .fa-plus{
+    font-size:18px;
+    color:#0B2545;
+    transition:0.4s;
 }
 
 .faq-answer{
     max-height:0;
     overflow:hidden;
+
     padding:0 30px;
+
     line-height:1.9;
     color:#666;
-    transition:max-height 0.5s ease,padding 0.5s ease;
+
+    transition:
+    max-height 0.5s ease,
+    padding 0.5s ease;
 }
 
 .faq-item.active .faq-answer{
@@ -545,8 +520,28 @@ body.dark-mode .card-content p{
     padding:0 30px 30px 30px;
 }
 
+.faq-item.active .fa-plus{
+    transform:rotate(45deg);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .faq-question{
+        padding:22px;
+        font-size:16px;
+    }
+
+    .faq-icon{
+        width:45px;
+        height:45px;
+        font-size:18px;
+    }
+
+}
 /* ========================= */
-/* CONTACT */
+/* FORM */
 /* ========================= */
 
 .contact{
@@ -583,6 +578,12 @@ form button{
 
 form button:hover{
     background:#00B4D8;
+}
+
+#formMessage{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
 }
 
 /* ========================= */
@@ -635,19 +636,14 @@ footer{
 
 @media(max-width:900px){
 
-    .navbar{
-        padding:15px 5%;
-    }
-
     .nav-links{
         position:absolute;
-        top:90px;
-        right:5%;
+        top:80px;
+        right:0;
         background:#0B2545;
         width:250px;
-        padding:30px;
-        border-radius:20px;
         flex-direction:column;
+        padding:30px;
         display:none;
     }
 
@@ -660,7 +656,7 @@ footer{
     }
 
     .hero-content h2{
-        font-size:50px;
+        font-size:45px;
     }
 
     .hero-content p{
@@ -668,7 +664,7 @@ footer{
     }
 
     .section-title h2{
-        font-size:38px;
+        font-size:35px;
     }
 
     .about-container{
@@ -681,19 +677,6 @@ footer{
 
     .img1{
         grid-row:auto;
-    }
-
-    .logo-img{
-        width:55px;
-        height:55px;
-    }
-
-    .logo-text h2{
-        font-size:22px;
-    }
-
-    .logo-text span{
-        font-size:10px;
     }
 
 }
