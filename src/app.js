@@ -84,7 +84,7 @@ const destinos = [
     informacion:
       "Disfruta playas paradisíacas, cultura vibrante y experiencias inolvidables en Brasil.",
 
-    imagen: "/src/assets/images/brasil1.jpg",
+    imagen: brasilImg,
 
     link: "https://visitbrasil.com/es/",
   },
@@ -95,7 +95,7 @@ const destinos = [
     informacion:
       "Explora la modernidad, centros turísticos y el famoso Canal de Panamá.",
 
-    imagen: "/src/assets/images/panama1.jpg",
+    imagen: panamaImg,
 
     link: "https://es.tourismpanama.com/",
   },
@@ -106,12 +106,11 @@ const destinos = [
     informacion:
       "Vive experiencias premium en playas tropicales y resorts exclusivos.",
 
-    imagen: "/src/assets/images/dominicana1.jpg",
+    imagen: dominicanaImg,
 
     link: "https://www.godominicanrepublic.com/",
   },
 ];
-
 const cardsContainer = document.getElementById("cardsContainer");
 
 if (cardsContainer) {
