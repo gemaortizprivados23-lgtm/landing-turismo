@@ -76,6 +76,9 @@ counters.forEach((counter) => {
 // =========================
 // DESTINOS DINÁMICOS
 // =========================
+import brasilImg from "./assets/brasil1.jpg";
+import panamaImg from "./assets/panama1.jpg";
+import dominicanaImg from "./assets/dominicana1.jpg";
 
 const destinos = [
   {
